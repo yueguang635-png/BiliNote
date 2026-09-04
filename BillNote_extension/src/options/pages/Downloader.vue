@@ -65,6 +65,8 @@ async function saveManual(p: Exclude<Platform, 'local'>) {
   }
 }
 
+SUPPORTED_COOKIE_PLATFORMS.forEach(ensureRow)
+
 onMounted(() => {
   SUPPORTED_COOKIE_PLATFORMS.forEach(ensureRow)
   refreshAll()
